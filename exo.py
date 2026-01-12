@@ -1,6 +1,6 @@
 from typing import Dict, Any, List
 
-def process_user_data(user_data: Dict[str, Any], include_history: bool = False) -> Dict[str, Any]:
+def process_user_data(user_data: Dict[str, ], include_history: bool = False) -> Dict[str, Any]:
     user_id: int = user_data["id"]
     name: str = user_data["name"]
     
@@ -10,7 +10,7 @@ def process_user_data(user_data: Dict[str, Any], include_history: bool = False) 
     }
     
     if include_history:
-        result["history"] = get_user_history(user_id)  # works even if function is below
+        result["history"] = get_user_history(user_id)  
     
     return result
 
